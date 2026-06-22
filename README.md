@@ -19,6 +19,7 @@ A comprehensive, hands-on Linux learning program through real-world production i
 ---
 
 ## 📁 Repository Structure
+```
 Projects/
 ├── README.md                          # This file
 ├── ROADMAP.md                         # All 50 incidents roadmap
@@ -48,22 +49,49 @@ Projects/
 │   └── Project-20-Logs-Missing-Cloud-Logging/
 ├── Phase-3-Intermediate/             # Projects 21-30
 │   ├── Project-21-LB-Backend-Unhealthy/
+```
+
+```
 │   ├── Project-22-Disk-IO-Bottleneck/
+```
+
+```
 │   ├── Project-23-FD-Limit-Exhausted/
 │   ├── Project-24-Port-Conflict/
 │   ├── Project-25-OOM-Killer-Terminates/
 │   ├── Project-26-TLS-Certificate-Expiry/
+```
+
+```
 │   ├── Project-27-Bad-DNS-Record/
 │   ├── Project-28-Zombie-Processes/
 │   ├── Project-29-SSH-Brute-Force-Attack/
 │   └── Project-30-Secret-Permission-Exposed/
 ├── Phase-4-Advanced/                 # Projects 31-40
 │   ├── Project-31-TCP-Connection-Exhaustion/
+```
+
+```
 │   ├── Project-32-Connection-Storm/
+```
+
+```
 │   ├── Project-33-Swap-Thrashing/
+```
+
+```
 │   ├── Project-34-Filesystem-Corruption/
+```
+
+```
 │   ├── Project-35-Inode-Exhaustion/
+```
+
+```
 │   ├── Project-36-CPU-Steal-Noisy-Neighbor/
+```
+
+```
 │   ├── Project-37-IAM-Permission-Breaks-Access/
 │   ├── Project-38-Broken-Startup-Script/
 │   ├── Project-39-Observability-Blind-Spot/
@@ -71,11 +99,26 @@ Projects/
 ├── Phase-5-Senior-SRE/                # Projects 41-50
 │   ├── Project-41-Regional-Outage-Failover/
 │   ├── Project-42-Autoscaling-Failure/
+```
+
+```
 │   ├── Project-43-GPU-Driver-CUDA-Mismatch/
+```
+
+```
 │   ├── Project-44-Model-Serving-CPU-Bottleneck/
+```
+
+```
 │   ├── Project-45-Vector-DB-Slow-Sizing/
+```
+
+```
 │   ├── Project-46-Distributed-Training-MTU/
 │   ├── Project-47-Checkpoint-Upload-Failure/
+```
+
+```
 │   ├── Project-48-Service-Brownout/
 │   ├── Project-49-Cost-Incident-RCA/
 │   └── Project-50-Full-Platform-Outage/
@@ -83,66 +126,110 @@ Projects/
 │   ├── PROJECT_TEMPLATE.md            # Standard project structure
 │   ├── INVESTIGATION_TABLE.md         # Symptom investigation table
 │   └── RUNBOOK_TEMPLATE.md            # Production runbook template
+```
+
+```
 ├── scripts/                           # Utility scripts
-│   ├── gcp-setup.sh                   # GCP infrastructure provisioning
-│   ├── cleanup.sh                     # Cleanup and cost control
-│   └── verify-setup.sh                # Verify GCP setup
-├── docs/                              # Supporting documentation
-│   ├── TROUBLESHOOTING_MINDSET.md     # How to think like an incident responder
-│   ├── LINUX_FUNDAMENTALS.md          # Core Linux concepts referenced throughout
-│   ├── AI_INFRASTRUCTURE_GLOSSARY.md  # AI/ML infrastructure terms
-│   └── INTERVIEW_PREP_GUIDE.md        # Interview question bank
+```
+
+- `│   ├── gcp-setup.sh                   # GCP infrastructure provisioning` 
+
+- `│   ├── cleanup.sh                     # Cleanup and cost control` 
+
+- `│   └── verify-setup.sh                # Verify GCP setup` 
+
+- `├── docs/                              # Supporting documentation` 
+
+- `│   ├── TROUBLESHOOTING_MINDSET.md     # How to think like an incident responder` 
+
+- `│   ├── LINUX_FUNDAMENTALS.md          # Core Linux concepts referenced throughout` 
+
+- `│   ├── AI_INFRASTRUCTURE_GLOSSARY.md  # AI/ML infrastructure terms` 
+
+- `│   └── INTERVIEW_PREP_GUIDE.md        # Interview question bank` 
 
 
 ---
 
 ## 🎯 Project Structure (Per Project)
-
-Each project directory follows this structure:
+```
 Project-NN-Title/
-├── 01-INCIDENT_OVERVIEW.md            # Section 1: Business impact, severity, scenario
-├── 02-LAB_SETUP.md                    # Section 2: GCP lab setup, infrastructure diagram
-├── 03-CREATE_INCIDENT.md              # Section 3: Break the system (exact commands)
-├── 04-OBSERVE_SYMPTOMS.md             # Section 4: User complaints, alerts, logs
-├── 05-INVESTIGATION.md                # Section 5: Troubleshooting methodology
-├── 06-INCIDENT_ANALYSIS_TABLE.md      # Section 6: Symptoms, investigation, findings
-├── 07-FIX.md                          # Section 7: Step-by-step remediation
-├── 08-VERIFICATION.md                 # Section 8: Confirm issue is fixed
-├── 09-DEEP_LINUX_INTERNALS.md         # Section 9: Kernel, process, network internals
-├── 10-AI_INFRASTRUCTURE_CONNECTION.md # Section 10: LLM, GPU, training, inference relevance
-├── 11-LESSONS_LEARNED.md              # Section 11: Lessons & best practices table
-├── 12-INTERVIEW_QUESTIONS.md          # Section 12: 15 interview Q&A (3 levels)
-├── 13-PRODUCTION_RUNBOOK.md           # Section 13: Professional runbook
-├── 14-GITHUB_PORTFOLIO.md             # Section 14: Portfolio project guidance
-├── 15-PROFESSIONAL_README.md          # Section 15: Portfolio-quality README
-├── README.md                          # Main project documentation
-├── cost-estimate.md                   # GCP cost for this project
-├── architecture/                      # Infrastructure diagrams
-│   ├── diagram.txt                    # ASCII architecture diagram
-│   └── diagram.png                    # Visual diagram (if available)
-├── incident/                          # Incident creation & setup
-│   ├── create-incident.sh             # Bash script to break the system
-│   ├── incident-log.txt               # Expected error messages
-│   └── symptoms-checklist.md          # What to expect after breaking
-├── investigation/                     # Investigation tools & commands
-│   ├── commands-checklist.md          # All commands to run during investigation
-│   ├── command-output-examples.md     # Example outputs (expected results)
-│   └── investigation-flowchart.md     # Decision tree for troubleshooting
-├── fixes/                             # Remediation scripts
-│   ├── fix.sh                         # Automated fix script
-│   ├── manual-fix-steps.md            # Step-by-step manual fix
-│   └── verification.sh                # Verification script
-├── screenshots/                       # Evidence of incident & resolution
-│   ├── 01-incident-created.png
-│   ├── 02-symptoms-observed.png
-│   ├── 03-investigation-process.png
-│   ├── 04-root-cause-identified.png
-│   ├── 05-fix-applied.png
-│   └── 06-verification-complete.png
-└── lessons-learned/                   # Knowledge artifacts
+├── 01-INCIDENT_OVERVIEW.md            # Section 1: Business impact, severity,
+scenario
+```
+
+- `├── 02-LAB_SETUP.md                    # Section 2: GCP lab setup, infrastructure diagram` 
+
+- `├── 03-CREATE_INCIDENT.md              # Section 3: Break the system (exact commands)` 
+
+- `├── 04-OBSERVE_SYMPTOMS.md             # Section 4: User complaints, alerts, logs` 
+
+- `├── 05-INVESTIGATION.md                # Section 5: Troubleshooting methodology ├── 06-INCIDENT_ANALYSIS_TABLE.md      # Section 6: Symptoms, investigation, findings` 
+
+- `├── 07-FIX.md                          # Section 7: Step-by-step remediation` 
+
+- `├── 08-VERIFICATION.md                 # Section 8: Confirm issue is fixed` 
+
+- `├── 09-DEEP_LINUX_INTERNALS.md         # Section 9: Kernel, process, network internals` 
+
+- `├── 10-AI_INFRASTRUCTURE_CONNECTION.md # Section 10: LLM, GPU, training, inference relevance` 
+
+- `├── 11-LESSONS_LEARNED.md              # Section 11: Lessons & best practices table` 
+
+- `├── 12-INTERVIEW_QUESTIONS.md          # Section 12: 15 interview Q&A (3 levels) ├── 13-PRODUCTION_RUNBOOK.md           # Section 13: Professional runbook` 
+
+- `├── 14-GITHUB_PORTFOLIO.md             # Section 14: Portfolio project guidance ├── 15-PROFESSIONAL_README.md          # Section 15: Portfolio-quality README ├── README.md                          # Main project documentation` 
+
+- `├── cost-estimate.md                   # GCP cost for this project` 
+
+- `├── architecture/                      # Infrastructure diagrams` 
+
+- `│   ├── diagram.txt                    # ASCII architecture diagram` 
+
+- `│   └── diagram.png                    # Visual diagram (if available) ├── incident/                          # Incident creation & setup` 
+
+- `│   ├── create-incident.sh             # Bash script to break the system` 
+
+- `│   ├── incident-log.txt               # Expected error messages` 
+
+- `│   └── symptoms-checklist.md          # What to expect after breaking` 
+
+- `├── investigation/                     # Investigation tools & commands` 
+
+- `│   ├── commands-checklist.md          # All commands to run during investigation` 
+
+- `│   ├── command-output-examples.md     # Example outputs (expected results)` 
+
+- `│   └── investigation-flowchart.md     # Decision tree for troubleshooting ├── fixes/                             # Remediation scripts` 
+
+- `│   ├── fix.sh                         # Automated fix script` 
+
+- `│   ├── manual-fix-steps.md            # Step-by-step manual fix` 
+
+- `│   └── verification.sh                # Verification script` 
+
+- `├── screenshots/                       # Evidence of incident & resolution` 
+
+- `│   ├── 01-incident-created.png` 
+
+- `│   ├── 02-symptoms-observed.png` 
+
+- `│   ├── 03-investigation-process.png` 
+
+- `│   ├── 04-root-cause-identified.png` 
+
+- `│   ├── 05-fix-applied.png` 
+
+- `│   └── 06-verification-complete.png` 
+
+- `└── lessons-learned/                   # Knowledge artifacts` 
+
+```
     ├── summary.md                     # Quick reference
-    ├── cheat-sheet.md                 # Commands and concepts quick reference
-    └── common-mistakes.md             # What NOT to do
+```
+
+- `├── cheat-sheet.md                 # Commands and concepts quick reference └── common-mistakes.md             # What NOT to do` 
+
 
 
 ---
